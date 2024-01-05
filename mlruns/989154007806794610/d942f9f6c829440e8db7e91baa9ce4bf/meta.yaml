@@ -1,0 +1,15 @@
+artifact_uri: file:\C:\Users\cj_li\Desktop\13. Proyecto de MLOps de principio a fin\mlruns/989154007806794610/d942f9f6c829440e8db7e91baa9ce4bf/artifacts
+end_time: 1704447452693
+entry_point_name: ''
+experiment_id: '989154007806794610'
+lifecycle_stage: active
+run_id: d942f9f6c829440e8db7e91baa9ce4bf
+run_name: blushing-doe-103
+run_uuid: d942f9f6c829440e8db7e91baa9ce4bf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704447436764
+status: 3
+tags: []
+user_id: crisbebop

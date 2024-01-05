@@ -1,0 +1,38 @@
+defaults:
+  - process: process2
+  - model: model1
+  - _self_
+
+raw: 
+  path: data/raw/Employee.csv
+
+processed:
+  dir: data/processed
+  X_train: 
+    name: X_train.csv
+    path: ${processed.dir}/${processed.X_train.name}
+  X_test:
+    name: X_test.csv
+    path: ${processed.dir}/${processed.X_test.name}
+  y_train: 
+    name: y_train.csv
+    path: ${processed.dir}/${processed.y_train.name}
+  y_test:
+    name: y_test.csv
+    path: ${processed.dir}/${processed.y_test.name}  
+
+final:
+  dir: data/final
+  name: final.csv
+  path: ${final.dir}/${final.name}
+
+model:
+  dir: models
+  name: xgboost_model.joblib  # Cambiado para incluir la extensión de archivo
+  path: ${model.dir}/${model.name}
+
+
+
+mlflow_tracking_ui: file:\C:\Users\cj_li\Desktop\13. Proyecto de MLOps de principio a fin\mlruns  # Reemplaza con la ruta a tu carpeta mlruns
+mlflow_USERNAME: crisbebop  # Reemplaza con tu nombre de usuario de MLflow
+mlflow_PASSWORD: 9cc82ca58ab41863e66fa543a99a99f49017a90b  # Reemplaza con tu contraseña de MLflow
