@@ -48,7 +48,7 @@ def log_metrics(**metrics: dict):
 @hydra.main(version_base=None, config_path="../../config", config_name="main")
 def evaluate(config: DictConfig):
     mlflow.set_tracking_uri(config.mlflow_tracking_ui)
-    mlflow.set_experiment("employee_leave")
+    #mlflow.set_experiment("employee_leave") se desactiva porque no se puede dar un nombre de experimento para mlflow
     os.environ['MLFLOW_TRACKING_USERNAME'] = config.mlflow_USERNAME
     os.environ['MLFLOW_TRACKING_PASSWORD'] = config.mlflow_PASSWORD
 
