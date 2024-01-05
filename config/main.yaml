@@ -33,6 +33,6 @@ model:
 
 
 
-mlflow_tracking_ui: file:\C:\Users\cj_li\Desktop\13. Proyecto de MLOps de principio a fin\mlruns  # Reemplaza con la ruta a tu carpeta mlruns
+mlflow_tracking_ui: https://dagshub.com/crisbebop/employee.mlflow
 mlflow_USERNAME: crisbebop  # Reemplaza con tu nombre de usuario de MLflow
 mlflow_PASSWORD: 9cc82ca58ab41863e66fa543a99a99f49017a90b  # Reemplaza con tu contraseña de MLflow
