@@ -31,12 +31,16 @@ def add_dummy_data(df: pd.DataFrame):
         "Age": [0, 0, 0],
         "ExperienceInCurrentDomain": [0, 0, 0],
     }
+
+    rows1 = {"City": "Pune", "PaymentTier":0, "Age":0, "Gender": "Female", "EverBenched": "No", 
+             "ExperienceInCurrentDomain": 0}
+    
     dummy_df = pd.DataFrame(rows)
     return pd.concat([df, dummy_df])
 
 
 def rename_columns(X: pd.DataFrame):
-    X.columns = X.columns.str.replace("[", "_", regex=True).str.replace(
+    X.columns = X.columns.str.replace("\\[", "_", regex=True).str.replace(
         "]", "", regex=True
     )
     return X
@@ -51,9 +55,10 @@ def transform_data(df: pd.DataFrame):
     return dummy_X.iloc[0, :].values.reshape(1, -1)
 
 
-model = bentoml.picklable_model.load_runner(
+"""model = bentoml.xgboost.load_runner(
     f"{MODEL_NAME}:latest", method_name="predict"
-)
+)"""
+model = bentoml.xgboost.get("xgboost_model.joblib:latest").to_runner()
 # Create service with the model
 service = bentoml.Service("predict_employee", runners=[model])
 
