@@ -25,7 +25,7 @@ jobs:
           message: Add Colab badge
           push: true
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
 
   black:
     name: Black Check for Jupyter notebooks
